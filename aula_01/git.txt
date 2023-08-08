@@ -1,0 +1,17 @@
+git config --list
+
+git config --global user.name "Bastouwln"
+
+git config --global user.email "wathicyiscrazyomg@gmail.com"
+
+git config --global user.password "*******"
+
+https://github.com/Bastouwln/TDS_DS_2023_VESPERTINO.git
+
+git status
+
+git add aula2
+
+git commit -m "primeira aula de javascript"
+
+git push
