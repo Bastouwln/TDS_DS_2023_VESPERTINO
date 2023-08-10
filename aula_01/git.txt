@@ -6,7 +6,7 @@ git config --global user.email "*******"
 
 git config --global user.password "*******"
 
-https://github.com/Bastouwln/TDS_DS_2023_VESPERTINO.git
+git clone https://github.com/Bastouwln/TDS_DS_2023_VESPERTINO.git
 
 git status
 
