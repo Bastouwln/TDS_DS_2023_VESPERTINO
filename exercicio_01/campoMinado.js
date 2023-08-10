@@ -1,4 +1,3 @@
-const { clear } = require('console');
 
 const readline = require('readline').createInterface({
     input: process.stdin,
@@ -72,7 +71,7 @@ const readline = require('readline').createInterface({
     console.clear();
     readline.question("Deseja jogar? s/n ", resposta => {
         if(resposta == "s"){
-            loading();
+            campoMinado();
         }
         else if(resposta == "n"){
             setTimeout(function() {
@@ -130,11 +129,21 @@ for(var i = 0; i<9; i++){
 }
 }
 randomNumbers();
+console.log("    - 1  ", " 2  ", " 3  ")
 
-console.log(sorteio[0], " ", sorteio[1], " ", sorteio[2]);
-console.log (sorteio[3], " ", sorteio[4], " ", sorteio[5]);
-console.log (sorteio[6], " ", sorteio[7], " ", sorteio[8]);
+matriz = [" ", " ", " ", " ", " ", " ", " ", " "," "];
 
+for(var i=0; i<9; i++){
+    matriz[i] = "🟤"
+}
+
+console.log("1 - ", matriz[0], " ", matriz[1], " ", matriz[2]);
+console.log ("2 - ", matriz[3], " ", matriz[4], " ", matriz[5]);
+console.log ("3 - ", matriz[6], " ", matriz[7], " ", matriz[8]);
+
+readline.question("Escolha Um número 1 - 9! \n", resposta1 => {
+}
+)
 
 }
 
