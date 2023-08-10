@@ -122,7 +122,7 @@ switch (valorDeEntrada) {
 //object
 
 /*
-const lista = ["Douglas", "Laízia", "Otávio", "Diego", "João"];
+const lista = ["Douglas", "Laízia", "Otávio", "Diego", "João", Jean];
 
 console.log("-- - object - --")
 
@@ -146,3 +146,4 @@ alunos.forEach((value) =>{
 })
 
 */
+console.log("wekophfdojvldfyulgjdfçk");
