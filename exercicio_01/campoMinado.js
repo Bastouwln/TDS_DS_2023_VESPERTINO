@@ -1,3 +1,4 @@
+const { REPL_MODE_STRICT } = require('repl');
 
 const readline = require('readline').createInterface({
     input: process.stdin,
@@ -81,7 +82,6 @@ const readline = require('readline').createInterface({
                 console.clear();
                 console.log("Tchau então :(");
               }, 2500);
-              readline.close();
             console.clear();
         }else{
             jogar()
@@ -91,6 +91,9 @@ const readline = require('readline').createInterface({
     }, 2000);
 }
 
+
+
+
 function welcomeMinado(){
     console.clear();
     setTimeout(function() {
@@ -99,11 +102,16 @@ function welcomeMinado(){
     jogar()
 }
 
+
+
+
 function campoMinado(){
 
 
 var sorteio = [sorteio,sorteio,sorteio,sorteio,sorteio,sorteio,sorteio,sorteio,sorteio];
 var bomba = false;
+
+
 
 
 function randomNumbers(){
@@ -128,7 +136,16 @@ for(var i = 0; i<9; i++){
     }
 }
 }
+
+
+
+
+
+
 randomNumbers();
+
+
+
 console.log("    - 1  ", " 2  ", " 3  ")
 
 matriz = [" ", " ", " ", " ", " ", " ", " ", " "," "];
@@ -141,7 +158,8 @@ console.log("1 - ", matriz[0], " ", matriz[1], " ", matriz[2]);
 console.log ("2 - ", matriz[3], " ", matriz[4], " ", matriz[5]);
 console.log ("3 - ", matriz[6], " ", matriz[7], " ", matriz[8]);
 
-readline.question("Escolha Um número 1 - 9! \n", resposta1 => {
+readline.question("Escolha Um número 1 - 9! ", resposta1 => {
+  console.log("asdasdas", resposta1)
 }
 )
 
