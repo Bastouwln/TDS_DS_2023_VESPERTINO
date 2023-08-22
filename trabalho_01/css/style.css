@@ -1,0 +1,31 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.background{
+    background-color: black;
+    background-image: url("../img/background\ shrine\ maiden.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.imgStart{
+    animation-duration: 0.8s;
+    animation-name: startComingDown;
+    position: relative;
+    width: 400px;
+    height: 350px;
+    margin-left: 580px;
+    top:-200px;
+    animation-fill-mode: forwards;
+}
+
+@keyframes startComingDown{
+    from{
+        top:-200px;
+    }
+    to{
+        top: 10px;
+    }
+}
