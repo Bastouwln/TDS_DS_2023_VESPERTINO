@@ -98,6 +98,18 @@ nav a:hover{
     left:250px;
 }
 
-#chkMenu:checked{
-    
+#chkMenu:checked~nav{
+    transition-delay: 0.8s;
+    left: -190px;
+}
+#chkMenu:checked~nav a{
+    margin-left:200px;
+    font-size: 22px;
+}
+#chkMenu:checked~nav span{
+    display:none;
+    transition-delay: 1.0s;
+}
+#chkMenu:checked~nav a span{
+    transition-delay: 0.8s;
 }
