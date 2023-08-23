@@ -3,7 +3,8 @@
     margin: 0px;
 }
 .background{
-    background-color: black;
+    transition: 1.2;
+    position: relative;
     background-image: url("../img/background\ shrine\ maiden.png");
     height: 100vh;
     background-repeat: no-repeat;
@@ -17,16 +18,68 @@
     width: 400px;
     height: 30 5px;
     margin-left: 580px;
-    top:-200px;
+    top:-1000px;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
+#chkMenu:checked~.imgStart{
+    transition: 0.2s;
+    animation-name: startDisappearing;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 0.9s;
+    position: relative;
+}
+.reimu{
+    transition: 0.2px;
+    display:flex;
+    position: relative;
+    margin-top: -1500px;
+}
+.reimu2{
+    padding: 100px;
+    background-color: #fd54548a;
 
+}
+#chkMenu:checked~.reimu2{
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    animation-name: reimuComingDown;
+
+}
+#chkMenu:checked~.background{
+    transition: 1.0s;
+    animation-delay: 0.9s;
+    background-image: url("../img/background\ shrine\ maiden2.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter:blur(2px);
+}
 @keyframes startComingDown{
+    from{
+        top:-1000px;
+    }
+    to{
+        top:-200px;
+    }
+}
+
+@keyframes startDisappearing{
     from{
         top:-200px;
     }
     to{
-        top:500px;
+        top:-1000px;
+    }
+}
+
+@keyframes reimuComingDown{
+    from{
+        top:-1500px;
+    }
+    to{
+        top: 100px;
     }
 }
