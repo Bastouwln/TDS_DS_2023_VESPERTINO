@@ -3,6 +3,8 @@
     margin: 0px;
 }
 body{
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -21,6 +23,26 @@ body{
     transition: 1.0s;
     animation-delay: 0.9s;
     background-image: url("../img/background\ shrine\ maiden2.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter:blur(2px);
+}
+#marisa:checked~.background{
+    transition: 1.0s;
+    animation-delay: 0.9s;
+    background-image: url("../img/marisabackground.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter:blur(2px);
+}
+#remilia:checked~.background{
+    transition: 1.0s;
+    animation-delay: 0.9s;
+    background-image: url("../img/backgroundRemilia.png");
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -79,13 +101,10 @@ body{
 }
 
 
-
-
 .reimu{
     animation-duration: 2.0s;
     animation-fill-mode: forwards;
     animation-delay: 0.1s;
-    animation-name: reimuComingUp;
     animation-timing-function: ease-in-out;
     margin-left: 150px;
     display:flex;
@@ -119,8 +138,10 @@ body{
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-name: reimuComingDown;
-
 }
+
+
+
 @keyframes reimuComingDown{
     from{
         top:-1500px;
@@ -144,6 +165,11 @@ body{
     animation-name:reimuGoingLeft;
     animation-timing-function: ease-in-out;
 }
+#remilia:checked~#reimu2{
+    animation-duration: 1.0s;
+    animation-name:reimuGoingRight;
+    animation-timing-function: ease-in-out;
+}
 
 @keyframes reimuGoingLeft{
     from{
@@ -152,6 +178,17 @@ body{
     }
     to{
         margin-left: -2000px;
+        top:900px;
+    }
+}
+
+@keyframes reimuGoingRight{
+    from{
+        top: 900px;
+        margin-left:150px;
+    }
+    to{
+        margin-left: 2000px;
         top:900px;
     }
 }
@@ -165,16 +202,11 @@ body{
 
 
 .marisa{
-    animation-duration: 2.0s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.1s;
-    animation-name: marisaComingRight;
-    animation-timing-function: ease-in-out;
-    margin-left: -900px;
+    margin-left: 150px;
     display:flex;
     position: relative;
     align-items: center;
-    margin-top: -1500px;
+    margin-top: -500px;
 }
 .marisa2{
     padding: 100px;
@@ -185,7 +217,6 @@ body{
     padding: 100px;
 }
 .marisa3{
-    animation-name: marisaComingRight;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder;
     width: 500px;
@@ -198,9 +229,19 @@ body{
     background-color: #000000ad;
 }
 #marisa:checked~#marisa2{
-    animation-duration: 1.0s;
-    animation-name: MarisaComingLeft;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    animation-duration: 2.0s;
+    animation-name: marisaComingLeft;
 
+}
+#marisa:checked~#marisa2{
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    animation-duration: 2.0s;
+    animation-name: marisaComingRight;
 }
 @keyframes marisaComingRight{
     from{
@@ -212,14 +253,68 @@ body{
 }
 @keyframes marisaComingLeft{
     from{
-        top: 900px;
-        margin-left:-900px;
-    }
-    to{
-        margin-left: 150px;
         top:900px;
     }
+    to{
+        top:-1500px;
+    }
 }
+
+.remilia{
+    margin-left: 250px;
+    display:flex;
+    position: relative;
+    align-items: center;
+    margin-top: -495px;
+}
+.remilia2{
+    padding: 100px;
+    background-color: #0000005b;
+    text-align: center;
+}
+.div-h3{
+    padding: 100px;
+}
+.remilia3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    width: 500px;
+    flex-direction: row;
+    gap: 300px;
+    align-items: center;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    padding:20px;
+    background-color: #000000ad;
+}
+
+#remilia:checked~#remilia2{
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    animation-duration: 2.0s;
+    animation-name: remiliaComingRight;
+}
+
+@keyframes remiliaComingRight{
+    from{
+        top:-1500px;
+    }
+    to{
+        top: 900px;
+    }
+}
+@keyframes remiliaComingLeft{
+    from{
+        top:900px;
+    }
+    to{
+        top:-1500px;
+    }
+}
+
+
+
 #marisa{
     display:none;
 }
