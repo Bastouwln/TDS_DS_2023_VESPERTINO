@@ -3,7 +3,8 @@
     margin: 0px;
 }
 .background{
-    transition: 1.2;
+    transition: 1.0s;
+    animation-delay: 0.9s;
     position: relative;
     background-image: url("../img/background\ shrine\ maiden.png");
     height: 100vh;
@@ -31,19 +32,38 @@
     position: relative;
 }
 .reimu{
-    transition: 0.2px;
+    margin-left: 200px;
+    transition: 1.0s;
     display:flex;
     position: relative;
     margin-top: -1500px;
 }
 .reimu2{
+    transition: 1.0s;
+    animation-delay: 0.9s;
     padding: 100px;
     background-color: #fd54548a;
-
+    text-align: center;
 }
-#chkMenu:checked~.reimu2{
+.div-h1{
+    padding: 100px;
+}
+.reimu3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    width: 500px;
+    flex-direction: row;
+    gap: 300px;
+    align-items: center;
+    text-align: center;
+    color:rgb(25, 0, 255);
+    padding:20px;
+    background-color: #ff00008a;
+}
+#chkMenu:checked~.reimu{
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 0.9s;
     animation-name: reimuComingDown;
 
 }
@@ -77,9 +97,12 @@
 
 @keyframes reimuComingDown{
     from{
+        animation-delay: 1.0s;
+        transition: 1.0s;
         top:-1500px;
     }
     to{
-        top: 100px;
+        animation-delay: 1.0s;
+        top: 800px;
     }
 }
