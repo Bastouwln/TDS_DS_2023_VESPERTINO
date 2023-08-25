@@ -2,6 +2,11 @@
     padding: 0px;
     margin: 0px;
 }
+body{
+}
+
+
+
 .background{
     transition: 1.0s;
     animation-delay: 0.9s;
@@ -12,62 +17,7 @@
     background-position: center;
     background-size: cover;
 }
-.imgStart{
-    animation-duration: 0.9s;
-    animation-name: startComingDown;
-    position: relative;
-    width: 400px;
-    height: 30 5px;
-    margin-left: 580px;
-    top:-1000px;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-#chkMenu:checked~.imgStart{
-    transition: 0.2s;
-    animation-name: startDisappearing;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    animation-duration: 0.9s;
-    position: relative;
-}
-.reimu{
-    margin-left: 200px;
-    transition: 1.0s;
-    display:flex;
-    position: relative;
-    margin-top: -1500px;
-}
-.reimu2{
-    transition: 1.0s;
-    animation-delay: 0.9s;
-    padding: 100px;
-    background-color: #fd54548a;
-    text-align: center;
-}
-.div-h1{
-    padding: 100px;
-}
-.reimu3{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    width: 500px;
-    flex-direction: row;
-    gap: 300px;
-    align-items: center;
-    text-align: center;
-    color:rgb(25, 0, 255);
-    padding:20px;
-    background-color: #ff00008a;
-}
-#chkMenu:checked~.reimu{
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 0.9s;
-    animation-name: reimuComingDown;
-
-}
-#chkMenu:checked~.background{
+#reimu:checked~.background{
     transition: 1.0s;
     animation-delay: 0.9s;
     background-image: url("../img/background\ shrine\ maiden2.jpg");
@@ -77,32 +27,205 @@
     background-size: cover;
     filter:blur(2px);
 }
+
+
+
+.imgStart{
+    animation-duration: 0.9s;
+    animation-name: startComingDown;
+    position: relative;
+    width: 400px;
+    height: 30 5px;
+    margin-left: 580px;
+    bottom: -900px;
+    animation-fill-mode: forwards;
+    cursor:pointer;
+}
+
+.imgStart:hover{
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+#reimu:checked~.imgStart{
+    transition: 0.2s;
+    animation-name: startDisappearing;
+    animation-timing-function: ease-out;
+    animation-duration: 0.9s;
+    position: relative;
+}
+
+#reimu:checked~#btn_play{
+    display:none;
+}
+
+
 @keyframes startComingDown{
     from{
-        top:-1000px;
+        bottom:-900px;
     }
     to{
-        top:-200px;
+        bottom: 200px;
     }
 }
 
 @keyframes startDisappearing{
     from{
-        top:-200px;
+        bottom: 200px;
     }
     to{
-        top:-1000px;
+        bottom:-900px;
     }
 }
 
+
+
+
+.reimu{
+    animation-duration: 2.0s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    animation-name: reimuComingUp;
+    animation-timing-function: ease-in-out;
+    margin-left: 150px;
+    display:flex;
+    position: relative;
+    align-items: center;
+    margin-top: -1500px;
+}
+.reimu2{
+    padding: 100px;
+    background-color: #0000005b;
+    text-align: center;
+}
+.div-h1{
+    padding: 100px;
+}
+.reimu3{
+    animation-name: reimuComingUp;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    width: 500px;
+    flex-direction: row;
+    gap: 300px;
+    align-items: center;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    padding:20px;
+    background-color: #000000ad;
+}
+#reimu:checked~#reimu2{
+    animation-duration: 2.0s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-name: reimuComingDown;
+
+}
 @keyframes reimuComingDown{
     from{
-        animation-delay: 1.0s;
-        transition: 1.0s;
         top:-1500px;
     }
     to{
-        animation-delay: 1.0s;
-        top: 800px;
+        top: 900px;
     }
+}
+@keyframes reimuComingUp{
+    from{
+        top:700px;
+    }
+    to{
+        top:-1500px;
+    }
+}
+
+
+#marisa:checked~#reimu2{
+    animation-duration: 1.0s;
+    animation-name:reimuGoingLeft;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes reimuGoingLeft{
+    from{
+        top: 900px;
+        margin-left:150px;
+    }
+    to{
+        margin-left: -2000px;
+        top:900px;
+    }
+}
+
+.arrow{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+
+.marisa{
+    animation-duration: 2.0s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    animation-name: marisaComingRight;
+    animation-timing-function: ease-in-out;
+    margin-left: -900px;
+    display:flex;
+    position: relative;
+    align-items: center;
+    margin-top: -1500px;
+}
+.marisa2{
+    padding: 100px;
+    background-color: #0000005b;
+    text-align: center;
+}
+.div-h2{
+    padding: 100px;
+}
+.marisa3{
+    animation-name: marisaComingRight;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    width: 500px;
+    flex-direction: row;
+    gap: 300px;
+    align-items: center;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    padding:20px;
+    background-color: #000000ad;
+}
+#marisa:checked~#marisa2{
+    animation-duration: 1.0s;
+    animation-name: MarisaComingLeft;
+
+}
+@keyframes marisaComingRight{
+    from{
+        top:-1500px;
+    }
+    to{
+        top: 900px;
+    }
+}
+@keyframes marisaComingLeft{
+    from{
+        top: 900px;
+        margin-left:-900px;
+    }
+    to{
+        margin-left: 150px;
+        top:900px;
+    }
+}
+#marisa{
+    display:none;
+}
+#reimu{
+    display:none;
+}
+#remilia{
+    display:none;
 }
