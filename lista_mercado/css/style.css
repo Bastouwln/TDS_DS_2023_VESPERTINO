@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-primary: #50e3a4;
     --color-tertiary: #f0efe9;
     --color-tertiary-black: #5f6271;
@@ -16,6 +16,7 @@
 }
 
 
+
 @font-face {
     font-family: 'Roboto-Thin';
     src: url('../fonts/Roboto/Roboto-Thin.ttf');
@@ -24,7 +25,8 @@
 
 
 
-body{
+body {
+    transition: 1.0s;
     padding: 0px;
     margin: 0px;
     background-color: var(--color-tertiary);
@@ -32,15 +34,16 @@ body{
 
 
 /* * meio principal */
-.container{
-    display:flex;
+.container {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
 /* *card */
-.card{
+.card {
+    transition: 1.0s;
     margin-top: 12vh;
     background-color: var(--color-secondary);
     width: 50vh;
@@ -48,44 +51,46 @@ body{
 }
 
 
-.card-area{
-    margin:7vh;
+.card-area {
+    margin: 7vh;
 }
 
-.image-logo{
-    display:flex;
+.image-logo {
+    display: flex;
     justify-content: center;
     user-select: none;
 }
 
-.image-logo img{
+.image-logo img {
     height: 10vh;
 }
 
-.card-title{
+.card-title {
     text-align: center;
 }
-.card-title h1{
+
+.card-title h1 {
     font-family: 'Roboto';
-    color:var(--color-tertiary-black);
+    color: var(--color-tertiary-black);
     font-size: 3vh;
     text-transform: uppercase;
 }
-.card-title-line{
+
+.card-title-line {
     width: 100%;
     height: 1px;
     background-color: var(--color-tertiary-black);
 }
 
-.card-button{
-    display:flex;
+.card-button {
+    display: flex;
     justify-content: center;
     position: absolute;
     bottom: -5vh;
     width: 100%;
 }
 
-.button-add{
+.button-add {
     background-color: var(--color-primary);
     width: 10vh;
     height: 10vh;
@@ -94,18 +99,19 @@ body{
     user-select: none;
     transform: 0.4s;
     text-align: center;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
 }
 
-.button-add span{
+.button-add span {
+    transition: 1.0s;
     color: var(--color-primary-ofcourse);
     font-size: 5vh;
 }
 
-.button-add:hover{
+.button-add:hover {
     transition: 0.5s;
     flex-direction: row;
     opacity: 0.8;
@@ -113,16 +119,21 @@ body{
     height: 11vh;
 }
 
-ul{
+ul {
+    transition: 1.0s;
     margin: 0px;
     padding: 0px;
 }
-li{
-    margin:0px;
+
+li {
+    transition: 1.0s;
+    margin: 0px;
     padding: 0px;
     list-style: none;
 }
-.card-content{
+
+.card-content {
+    transition: 1.0s;
     width: 100%;
     margin-top: 1vh;
     height: 40vh;
@@ -131,21 +142,23 @@ li{
 
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 0px;
 }
 
-.card-content-item{
+.card-content-item {
+    transition: 1.0s;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin:2px;
+    margin: 2px;
 }
 
-.item-description{
+.item-description {
     flex-grow: 1;
 }
-.card-content-input input{
+
+.card-content-input input {
     background-color: var(--color-secondary);
     border: 0px;
     height: 25px;
@@ -153,12 +166,12 @@ li{
     font-family: "Robot-Thin", Thin;
 }
 
-.card-content-input input:focus{
+.card-content-input input:focus {
     outline: 0px;
     border-bottom: 1px solid var(--color-line);
 }
 
-.item-del span{
+.item-del span {
     transition: 0.4s;
     margin-left: 0px;
     margin-right: 1vh;
@@ -170,34 +183,40 @@ li{
 }
 
 
-.item-del span:hover{
+.item-del span:hover {
+
     transition: 0.4s;
     transition-delay: 0.1s;
     color: var(--color-secondary);
     background-color: var(--color-danger);
 }
 
-.item-rad span{
-    color:var(--color-line);
+.item-rad span {
+    transition: 1.0s;
+    color: var(--color-line);
     user-select: none;
     text-align: center;
     border-radius: 50%;
-    cursor:pointer;
+    cursor: pointer;
     transition: 0.4s;
     transition-delay: 0.5;
     font-size: 3vh;
 }
-.item-rad span:hover{
-    color:var(--color-primary);
+
+.item-rad span:hover {
+    transition: 1.0s;
+    color: var(--color-primary);
     transition: 0.4s;
 }
 
-.card-content-input-checked input{
+.card-content-input-checked input {
+    transition: 1.0s;
     color: var(--color-primary);
     text-decoration: line-through;
 }
 
-.item-rad-checked span{
+.item-rad-checked span {
+    transition: 1.0s;
     color: var(--color-primary);
     cursor: pointer;
 }
@@ -206,7 +225,46 @@ li{
 
 
 
-.item-description-checked{
+.item-description-checked {
     color: var(--color-line);
     text-decoration: line-through;
+}
+
+
+/* ! MOBILE */
+
+@media(max-width:452px) {
+    body {
+        transition: 1.0s;
+        background-color: var(--color-secondary);
+    }
+
+    .card {
+        transition: 1.0s;
+        margin-top: 0px;
+        width: 100%;
+        filter: none;
+    }
+
+    .card-content {
+        transition:1.0s;
+        height: 63vh;
+    }
+
+    .card-button {
+        transition:1.0s;
+        bottom: 2vh;
+    }
+
+    ::-webkit-scrollbar {
+        transition:1.0s;
+        width: 100%;
+    }
+}
+/*! tablet */
+@media (max-width:768px){
+    body{
+        transition:1.0s;
+        background-color: red;
+    }
 }
