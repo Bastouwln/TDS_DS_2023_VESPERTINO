@@ -82,7 +82,6 @@ function onChecked(index) {
 }
 
 function addItem(item) {
-
     if (item) {
         appendComponent(item.id, item.value, item.status);
     } else {
