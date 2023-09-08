@@ -9,15 +9,19 @@ function saveListStorage() {
     list_item = [];
 
     items.forEach((item) => {
+
         const id = item.id
         const input = item.getElementsByTagName("input")[0];
         const status = item.getElementsByTagName("span")[1].innerHTML == "check_circle";
 
+
+        if(input.value !== ""){
         list_item.push({
             id: id,
             value: input.value,
             status: status
         });
+    }
     });
 
     window.localStorage.setItem("dados", JSON.stringify(list_item));
@@ -82,9 +86,8 @@ function addItem(item) {
     if (item) {
         appendComponent(item.id, item.value, item.status);
     } else {
+        const item = document.getElementById(countIndex);
         countIndex++
-        const item = document.getElementById(countIndex - 1);
-
         if (item) {
             const input = item.getElementsByTagName("input")[0];
             if(input.value.trim() !== ""){
