@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.cachorro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 219, 219, 0.27);
+    height: 50vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    display:flex;
+    position: relative;
+}
+.botoes{
+    position: relative;
+    text-align: center;
+    background-color: rgba(19,19,19,0.3);
+    padding: 100px;
+    border-radius: 10px;
+    width: 350px;
+    cursor:pointer;
+}
+.cachorro2{
+    display:flex;
+}
+.botoess{
+    padding-bottom: 50px;
+    opacity: 0.8;
+    color: #fff;
+    cursor:pointer;
+    background-color: black;
+    color:white;
+    width: auto;
+}
+.resultado3{
+    position:relative;
+    color:white;
+    background-color: purple;
+    width: auto;
+    display:flex;
+    flex-direction: column;
+}
+.catch{
+    font-size: 25px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
