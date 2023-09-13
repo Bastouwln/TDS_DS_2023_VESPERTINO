@@ -1,5 +1,6 @@
 const resposta = window.document.getElementsByClassName("catch")[0];
 const resposta2 = window.document.getElementsByClassName("child")[0];
+var temp = "";
 
 function cuca(op){
     var valor1 = document.getElementById("valor1").value;
@@ -12,9 +13,12 @@ function cuca(op){
     a.setAttribute("class","resultado3");
     resposta.appendChild(a);
 
-
+    if(op != temp){
+        clear();
+    }
     var valor3
-    if(op =='+'){
+    console.log(temp)
+    if(op === '+'){
         valor3 = valor1 + valor2;
         if(valor1 && valor2 == 0){
             a.innerHTML = "Ambos os valores não detectados";
@@ -25,9 +29,10 @@ function cuca(op){
         }
         else{
         valor3 = String(valor3);
-
         a.innerHTML = "Seu valor da sua soma é : " + valor3;
         }
+        
+        temp = "+"
     }
     if(op =='-'){
         if(valor1 && valor2 == 0){
@@ -44,6 +49,7 @@ function cuca(op){
 
         a.innerHTML = "Seu valor da sua subtração é : " + valor3;
         }
+        temp = "-"
     }
     if(op =='*'){
         if(valor1 && valor2 == 0){
@@ -75,7 +81,7 @@ function cuca(op){
         a.innerHTML = "Seu valor da sua divisão é : " + valor3;
         }
     }
-    if(op == "CLEAR"){
-        resposta.innerHTML = "";
-    }
+}
+function clear(){
+    resposta.innerHTML = "";
 }
