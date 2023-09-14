@@ -1,0 +1,21 @@
+api's
+
+express.js
+$ npm install express --save
+npm init
+name: qualquer nome
+version:versão
+descrição: qualquer
+entry point(index.js): qual vai ser o começo?
+test command: blé
+git repository: blé
+keywords: ble
+author: autor
+licensa: nao precisa
+
+npm init -y = template
+
+npm start
+index tem que ser criada separadamente
+
+npm install express
