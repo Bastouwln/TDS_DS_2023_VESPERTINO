@@ -19,3 +19,10 @@ npm start
 index tem que ser criada separadamente
 
 npm install express
+
+{
+    id,
+    nome,
+    username,
+    senha
+    }
