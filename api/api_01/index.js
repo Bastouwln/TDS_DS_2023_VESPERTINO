@@ -9,27 +9,6 @@ app.use(bodyParser.json());
 app.use(routes);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.get("minharota")
-
-
-
-
-
-
-
 app.listen(8080, () =>
       console.log("o servidor está rodando na porta 8080")
 );
