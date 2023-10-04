@@ -1,5 +1,5 @@
 const express = require('express');
-const { listaAlunos } = require('../controller/alunos.controller');
+const { listaAlunos, buscaAlunosPorID } = require('../controller/alunos.controller');
 const routes = new express.Router();
 
 routes.get("/", listaAlunos);
@@ -18,5 +18,7 @@ routes.get("/atividades",(request,response) =>{
 routes.get("/perfil",(request,response) =>{
     response.send("alunos - perfil");
 });
+
+routes.get("/(:id)", buscaAlunosPorID);
 
 module.exports = routes;
