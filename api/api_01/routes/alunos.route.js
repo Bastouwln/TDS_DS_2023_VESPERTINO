@@ -19,6 +19,6 @@ routes.get("/perfil",(request,response) =>{
     response.send("alunos - perfil");
 });
 
-routes.get("/(:id)", buscaAlunosPorID);
+routes.get("/(:id([0-9]+))", buscaAlunosPorID);
 
 module.exports = routes;
