@@ -15,3 +15,9 @@ git add aula2
 git commit -m "primeira aula de javascript"
 
 git push
+
+
+supabase
+
+CRUDE 
+c create r read u update d delete
