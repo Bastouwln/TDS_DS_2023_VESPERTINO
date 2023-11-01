@@ -34,7 +34,7 @@ module.exports = {
         })
     },
 
-    atualizar:(request,response) =>{
+        atualizar:(request,response) =>{
         const { id } = request.params
         const data = request.body
 
