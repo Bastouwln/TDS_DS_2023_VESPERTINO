@@ -15,7 +15,7 @@ module.exports = {
             if(data === user.senha){
                 response.send(data);
                 }
-                else{response.send({message: "Senha ou usuário incorretos"})}
+                else{response.send({message: "Logado com sucesso!"})}
         }).catch(((error)=>{
             console.log(error);
             response.status(500).send({message: "Erro ao executar login!"})
