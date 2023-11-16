@@ -1,21 +1,20 @@
 const { response } = require("express");
-const {searchForAll,signUp, login} = require("../repository/usuarios.repository.js");
+const {searchForAll,signUp,delete1,login,} = require("../repository/usuarios.repository.js");
 
 module.exports = {
 
+
     loginUsuario:(request,response)=>{
-        const data = request.body;
-        const {id} = request.params;
         const user = {
-            nome:request.body.nome,
-            user_name: request.body.user_name,
+            email:request.body.email,
             senha: request.body.senha
         }
-        login(id,data).then((data)=>{
-            if(data === user.senha){
-                response.send(data);
-                }
-                else{response.send({message: "Logado com sucesso!"})}
+
+
+        login(user.email).then((email)=>{
+            if(user.email = email){
+                response.send({message:"logado com sucesso!"})
+            } else{response.send({message: "Email ou senha estão errados."})}
         }).catch(((error)=>{
             console.log(error);
             response.status(500).send({message: "Erro ao executar login!"})
@@ -32,6 +31,16 @@ module.exports = {
             console.log(error);
             response.status(500).send({message: "Error ao cadastrar!"});
         })
+    },
+    deletarCadastro:(request,response)=>{
+    const { id } = request.params
+
+    delete1(id).then((data =>{
+        response.send({message: "usuario deletado com sucesso!!"})
+    })).catch((error)=>{
+        console.log(error);
+        response.status(500).send({message: "Erro ao deletar usuario!!!!!!!!"})
+    })
     },
 
     listaUsuarios:(request,response)=>{
